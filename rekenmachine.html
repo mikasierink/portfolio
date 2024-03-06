@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+</html>
+  <head>
+  <style>
+
+  body {
+  background-color: #89A1E8 ;
+  font-family: "Lucida Console";
+  }
+ 
+  </style>
+    <title>Rekenmachine</title>
+  <script>
+  
+  function berekenen(){
+    let getal1 =document.getElementById("getal1").value;
+    let getal2 =document.getElementById("getal2").value;
+    getal1 = parseInt(getal1);
+    getal2 = parseInt(getal2);
+    let operator = document.getElementById("operator").value;
+    let resultaat = 0;
+
+    
+      if (operator == "*")
+    {
+      resultaat = vermenigvuldig(getal1,getal2);
+    }
+    
+    if (operator == "+")
+    {
+      resultaat = telOp(getal1,getal2);
+    }
+
+    if (operator == "-")
+    {
+      resultaat = trekAf(getal1,getal2);
+    }
+    
+    if (operator == "/")
+    {
+      resultaat = deel(getal1,getal2);
+    }
+
+    document.getElementById("resultaat").innerHTML = " = "  + resultaat;
+  }
+  
+  function vermenigvuldig(g1, g2){
+    return g1 * g2;
+  }
+  
+  function telOp(g1, g2){
+    return g1 + g2;
+  }
+  
+  function trekAf(g1, g2){
+    return g1 - g2;
+  }
+
+  function deel(g1, g2){
+    return g1 / g2;
+  }
+
+  </script>
+  </head>
+  
+  <label>Getal 1</label><input type="number" id="getal1"><br>
+  <label>Getal 2</label><input type="number" id="getal2"> <br>
+    
+  <p>
+   <select id="operator">
+   <option value="+">Optellen</option>
+   <option value="-">Aftrekken</option>
+   <option value="*">Vermenigvuldigen</option>
+   <option value="/">Delen</option>
+   </select>
+   </p>
+    
+    <button onclick="berekenen()">Bereken</button>
+    
+    
+    <p>
+   <label>Het resultaat</label><div id="resultaat"></div>
+
+  </body>
+
+</html>

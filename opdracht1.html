@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title> Optellen</title>
+  <style>
+
+  body {
+  background-color: #89A1E8 ;
+  font-family: "Lucida Console";
+  }
+ 
+  </style>
+  </head>
+  
+  <body>
+    
+     <h2 style="color: black;"> <b> Programmeeropdrachten</b></h2>
+   
+    <script>
+  
+    let x = 1;
+    let y = 2;
+    let resultaat;
+
+    x = prompt("Geef getal 1 op:");
+    y = prompt("Geef getal 2 op:");
+
+    if (!isNaN(x)){
+      x = parseInt(x);
+    }
+    
+    if (!isNaN(y)){
+      y = parseInt(y);
+    }
+
+
+    resultaat = x + y;
+
+    document.write("Het resultaat van "  + x + " + " + y + " =  " +  resultaat);
+  
+  </script>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,26 @@
+html {
+  background-repeat: no-repeat;
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('achtergrond.jpg');
+  background-size:cover;
+}
+
+h1 {
+  background-color: red;
+  padding: 30px;
+  margin: 0px;
+}
+
+p {
+  color: white;
+  font-size: 30px;
+}
+
+button {
+ font-size: 30px;
+ color: red;
+ background-color: yellow;
+ padding: 40px 40px;
+ border: 8px solid brown;
+border-radius: 400px;
+margin: 100px 100px ;
+}

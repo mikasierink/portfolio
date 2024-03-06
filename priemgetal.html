@@ -1,0 +1,50 @@
+<html>
+  <head>
+   <title>Bepalen priemgetal</title>
+    
+     <script>
+      // alle code die je schrijft komt binnen de script tags
+      // text naar je scherm doe je met document.write(text)
+      // popup maken met alert (https://www.w3schools.com/jsref/met_win_alert.asp)
+      // input vragen met prompt (https://www.w3schools.com/jsref/met_win_prompt.asp)
+      // debugging https://www.w3schools.com/js/js_debugging.asp
+      // debugging met console (https://www.w3schools.com/jsref/obj_console.asp)
+      
+function check()
+{
+  
+ 
+  let getal = document.getElementById("getal").value;
+  let isPriemgetal = true;
+  
+  // alert(getal);
+  for(i=2;i<getal;i++)
+  {
+    let mod = getal % i;
+    if (mod==0)
+   {
+     isPriemgetal = false;
+     break;
+   }
+  }
+
+  if (isPriemgetal) {
+  document.getElementById("resultaat").innerHTML = getal + " is een priemgetal! ";
+
+
+  }else
+   {
+     document.getElementById("resultaat").innerHTML = getal + " is geen priemgetal! ";
+   }
+   
+}
+     </script>
+  </head>
+  
+  <body>
+  <h3> Priemgetal:</h3>
+  <label>Voer een getal in:</label><input id="getal" type="number">
+ <div> <button onclick="check()"> Check!</button> </div>
+  <div id="resultaat"> Het resultaat is</div>
+  </body>
+</html>
